@@ -1,0 +1,5 @@
+数据库
+from flask.ext.sqlalchemy import SQLAlchemy 更改 from flask_sqlalchemy import SQLAlchemy
+import imp 改为import types
+tmp_module = imp.new_module('old_model') 改为 tmp_module = types.ModuleType('old_model')
+遇见 flask.ext.login或者其他flask.ext的时候，用flask_login
